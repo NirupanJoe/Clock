@@ -1,17 +1,14 @@
 import { React, useEffect } from 'react';
 import './App.css';
-import context from './core/context';
-import SampleService from './services/sample';
-import SimpleButton from './components/simpleButton';
+import ClockDisplay from './components/clockDisplay';
+import TickerService from './services/ticker';
 
 const App = () => {
-	useEffect(SampleService.sayHai, []);
+	useEffect(TickerService.clockService, []);
 
 	return (
 		<div className="App">
-			<div>Count: { context.state.count }</div>
-			<div>{ SimpleButton() }</div>
-			<div>Refresh ID: { context.state.refreshID }</div>
+			<div>{ ClockDisplay() }</div>
 		</div>
 	);
 };
