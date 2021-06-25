@@ -7,11 +7,15 @@ const clockDisplay = ({ data }) => ({
 const alterClockDisplay = ({ data }) => ({
 	clock: data,
 });
+const hourSelect = ({ data }) => ({
+	hour: data,
+});
 
 const actions = {
 	increaseCount,
 	clockDisplay,
 	alterClockDisplay,
+	hourSelect,
 };
 
 export default actions;
