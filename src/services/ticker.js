@@ -3,9 +3,12 @@ import clockManagement from './clockManagement';
 
 const clockService = () => {
 	const { clockDelay } = context.config;
-	const { clockDisplay } = context.actions;
+	const { clockDisplay, alterClockDisplay } = context.actions;
 
-	setInterval(() => clockDisplay(clockManagement.getTimes()), clockDelay);
+	setInterval(() => {
+		clockDisplay(clockManagement.getTimes());
+		alterClockDisplay(clockManagement.getClock());
+	}, clockDelay);
 };
 
 const TickerService = {

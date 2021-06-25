@@ -11,8 +11,16 @@ const getTimes = () => {
 	};
 };
 
+const getClock = () => {
+	const date = new Date();
+	const local = date.toLocaleString('en-IN',
+		{ timeStyle: 'medium', hour12: 'true' });
+
+	return local;
+};
 const clockManagement = {
 	getTimes,
+	getClock,
 };
 
 export default clockManagement;

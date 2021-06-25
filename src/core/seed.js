@@ -7,10 +7,11 @@ const seed = {
 	count: config.countStart,
 	refreshID: rndString(refreshIDLength),
 	time: {
-		hour: 0,
-		minute: 0,
-		second: 0,
+		hour: null,
+		minute: null,
+		second: null,
 	},
+	clock: null,
 };
 
 export default seed;
