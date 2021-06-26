@@ -10,12 +10,16 @@ const alterClockDisplay = ({ data }) => ({
 const hourSelect = ({ data }) => ({
 	hour: data,
 });
+const clockSelect = ({ data }) => ({
+	clockType: data,
+});
 
 const actions = {
 	increaseCount,
 	clockDisplay,
 	alterClockDisplay,
 	hourSelect,
+	clockSelect,
 };
 
 export default actions;

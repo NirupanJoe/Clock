@@ -13,6 +13,7 @@ const seed = {
 	},
 	clock: null,
 	hour: config.hours[0],
+	clockType: config.clocks[0],
 };
 
 export default seed;
