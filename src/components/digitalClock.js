@@ -1,7 +1,7 @@
 import { React } from 'react';
 import context from '../core/context';
 
-const ClockHour = () => {
+const DigitalClock = () => {
 	const { hour, minute, second } = context.state.time;
 	const clock = context.state.hour === 'hour12'
 		? <div className="time">{context.state.clock}</div>
@@ -10,4 +10,4 @@ const ClockHour = () => {
 	return clock;
 };
 
-export default ClockHour;
+export default DigitalClock;

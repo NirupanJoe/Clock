@@ -1,10 +1,8 @@
 import { React } from 'react';
-import ClockHour from './clockHour';
-import HourSelect from './hourSelect';
+import AnalogClock from './analogClock';
 
 const ClockDisplay = () => <div>
-	<div>{HourSelect()}</div>
-	{ ClockHour() }
+	<div>{AnalogClock()}</div>
 </div>;
 
 export default ClockDisplay;
