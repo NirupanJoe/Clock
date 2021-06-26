@@ -16,6 +16,26 @@
 	border: 2px solid #c9c963;
 	border-radius: 50%;
 }
+.hour {
+	top: 20%;
+	background: #32cd325c;
+	width: 2.5%;
+	height: 30%;
+	position: absolute;
+	left: 50%;
+	transform-origin: bottom;
+	animation: time 43200s infinite linear;
+}
+.minute {
+	top: 10%;
+	background: #cd32325e;
+	width: 2%;
+	height: 40%;
+	position: absolute;
+	left: 50%;
+	transform-origin: bottom;
+	animation: time 3600s infinite linear;
+}
 .second {
 	background: lightpink;
 	position: absolute;
@@ -24,9 +44,9 @@
 	height: 45%;
 	top: 5%;
 	transform-origin: bottom;
-	animation: second infinite 60s linear;
+	animation: time infinite 60s  linear;
 }
-@keyframes second {
+@keyframes time {
 	0% {
 		transform: rotate(0deg);
 	}
