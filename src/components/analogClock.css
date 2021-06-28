@@ -28,7 +28,6 @@
 	width: 2.5%;
 	height: 30%;
 	left: 48.75%;
-	animation: time 43200s infinite linear;
 }
 .minute {
 	top: 10%;
@@ -36,7 +35,6 @@
 	width: 2%;
 	height: 40%;
 	left: 49%;
-	animation: time 3600s infinite linear;
 }
 .second {
 	background: lightpink;
@@ -44,13 +42,4 @@
 	width: .8%;
 	height: 45%;
 	top: 5%;
-	animation: time infinite 60s  linear;
-}
-@keyframes time {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
 }

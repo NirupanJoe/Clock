@@ -1,9 +1,10 @@
+const ten = 10;
+
 const getTimes = () => {
 	const date = new Date();
 	const hour = date.getHours();
 	const minute = date.getMinutes();
 	const getSecond = date.getSeconds();
-	const ten = 10;
 	const second = getSecond < ten ? `0${ getSecond }` : getSecond;
 
 	return {
