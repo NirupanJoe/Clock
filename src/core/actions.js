@@ -1,7 +1,7 @@
 const increaseCount = ({ state, data }) => ({
 	count: state.count + data,
 });
-const clockDisplay = ({ data }) => ({
+const setTime = ({ data }) => ({
 	time: data,
 });
 const alterClockDisplay = ({ data }) => ({
@@ -16,7 +16,7 @@ const clockSelect = ({ data }) => ({
 
 const actions = {
 	increaseCount,
-	clockDisplay,
+	setTime,
 	alterClockDisplay,
 	hourSelect,
 	clockSelect,

@@ -1,14 +1,10 @@
 import context from '../core/context';
-import clockManagement from './clockManagement';
 
 const clockService = () => {
 	const { clockDelay } = context.config;
-	const { clockDisplay, alterClockDisplay } = context.actions;
+	const { setTime } = context.actions;
 
-	setInterval(() => {
-		clockDisplay(clockManagement.getTimes());
-		alterClockDisplay(clockManagement.getClock());
-	}, clockDelay);
+	setInterval(() => setTime(new Date()), clockDelay);
 };
 
 const TickerService = {
