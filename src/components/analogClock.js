@@ -2,38 +2,25 @@ import { React } from 'react';
 import './analogClock.css';
 import context from '../core/context';
 import clockManagement from '../services/clockManagement';
+import AnalogClockHour from './analogClockHour';
+import AnalogClockMinute from './analogClockMinute';
+import AnalogClockSecond from './analogClockSecond';
 
 const six = 6;
 const thirty = 30;
 
-const clock = () => {
-	const { time } = context.state;
-	const { hour, minute, second } = clockManagement.getTimes(time);
+const AnalogClock = () => {
+	const { hour, minute, second } = clockManagement
+		.getTimes(context.state.time);
 
-	return {
-		hour,
-		minute,
-		second,
-	};
-};
-
-const AnalogClock = () =>
-	<div className="clock">
+	return <div className="clock">
 		<div className="container">
 			<div className="clock-circle"> </div>
-			<div
-				className="hour"
-				style={ { transform: `rotate(${ clock().hour * thirty }deg)` } }
-			/>
-			<div
-				className="minute"
-				style={ { transform: `rotate(${ clock().minute * six }deg)` } }
-			/>
-			<div
-				className="second"
-				style={ { transform: `rotate(${ clock().second * six }deg)` } }
-			/>
+			{AnalogClockHour(hour, thirty)}
+			{AnalogClockMinute(minute, six)}
+			{AnalogClockSecond(second, six)}
 		</div>
 	</div>;
+};
 
 export default AnalogClock;
